@@ -1,0 +1,229 @@
+:root {
+    --blue: hsl(223, 87%, 63%);
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: hsl(354, 100%, 66%);
+    --gray: hsl(0, 0%, 59%);
+    --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+body, h1, h2, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.wrapper {
+    min-width: 350px;
+    max-width: 620px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header {
+    padding: 4.6em 0 1.6em;
+}
+
+.header_logo {
+    width: 4.4em;
+}
+
+.header_title {
+    position: absolute;
+    left: -999999999px;
+}
+
+.main_title {
+    margin-bottom: .6em;
+    font-size: 1.6em;
+    font-weight: 300;
+    color: var(--gray);
+}
+
+.main_title-black {
+    font-weight: 700;
+    color: var(--very-dark-blue);
+}
+
+.main_form {
+    display: grid;
+    justify-content: center;
+    row-gap: .8em;
+    margin: 2em auto 4em;
+}
+
+.mainForm_input {
+    width: 375px;
+    height: 3.6em;
+    border: 1px solid var(--pale-blue);
+    border-radius: 1.8em;
+}
+
+.mainForm_input[type="email"] {
+    text-indent: 2em;
+}
+
+.mainForm_input[type="email"]:focus {
+    outline: 2px solid var(--blue);
+}
+
+.mainForm_input[type="email"]::placeholder {
+    color: var(--pale-blue);
+}
+
+.mainForm_input[type="email"].error {
+    border-color: var(--light-red);
+    outline: 1px solid var(--light-red);
+}
+
+.mainForm_input[type="submit"] {
+    border-color: var(--blue);
+    box-shadow: 0 .4em .6em 0 rgba(56, 56, 228, 0.264);
+    font-weight: 600;
+    color: white;
+    background: var(--blue);
+    cursor: pointer;
+}
+
+.mainForm_input[type="submit"]:hover {
+    border-color: var(--pale-blue);
+    background: var(--pale-blue);
+}
+
+.mainForm_errMsg {
+    margin-top: -.8em;
+    font-size: .6em;
+    color: var(--light-red);
+}
+
+.footer {
+    margin-top: 5em;
+    font-size: .8em;
+    color: var(--gray);
+}
+
+.footer_link {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    margin-right: .6em;
+    margin-bottom: 1em;
+    border: 1px solid rgba(128, 128, 128, 0.21);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2em;
+    color: var(--blue);
+}
+
+.footer_link:last-child {
+    margin-right: 0;
+}
+
+.footer_link:hover {
+    color: white;
+    background: var(--blue);
+}
+
+.attribution {
+    margin-top: 1em;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 680px) {
+    .main_title {
+        font-size: 2.2em;
+    }
+
+    .main_form {
+        column-gap: .8em;
+        grid-template-areas: 'e s'
+                             'm m';
+    }
+
+    .mainForm_input[type="email"] {
+        grid-area: e;
+    }
+
+    .mainForm_input[type="submit"] {
+        grid-area: s;
+        width: 14em;
+    }
+
+    .mainForm_errMsg {
+        grid-area: m;
+        text-align: left;
+        text-indent: 2em;
+    }
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?fw1bnp');
+    src:  url('../fonts/icomoon.eot?fw1bnp#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?fw1bnp') format('truetype'),
+      url('../fonts/icomoon.woff?fw1bnp') format('woff'),
+      url('../fonts/icomoon.svg?fw1bnp#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  .icon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    /* speak: never; */
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    
+    /* Enable Ligatures ================ */
+    letter-spacing: 0;
+    -webkit-font-feature-settings: "liga";
+    -moz-font-feature-settings: "liga=1";
+    -moz-font-feature-settings: "liga";
+    -ms-font-feature-settings: "liga" 1;
+    font-feature-settings: "liga";
+    -webkit-font-variant-ligatures: discretionary-ligatures;
+    font-variant-ligatures: discretionary-ligatures;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-facebook:before {
+    content: "\ea90";
+  }
+  .icon-instagram:before {
+    content: "\ea92";
+  }
+  .icon-twitter:before {
+    content: "\ea96";
+  }
+  
